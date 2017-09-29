@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="Keywords" content="华中科技大学校徽头像、华中科技校徽头像、华科校徽头像、华中大校徽头像、华科大校徽头像"/>
+    <meta name="Description" content="华中科技大学校徽头像"/>    
+
+    <link rel="shortcut icon" href="img/hustico.ico" type="image/x-icon">    
+
+    <title>华中大头像生成器</title>
+
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+    <link  href="cropperjs/cropper.min.css" rel="stylesheet">
+    <script type="text/javascript" src="cropperjs/cropper.min.js"></script>
+
+    <script type="text/javascript" src="bootstrap/jquery-3.2.1.js"></script>
+    <script src="js/index.min.js"></script>
+
+</head>
+
+
+<div class="container">
+            <div class="row">
+            <!-- the logo of hust -->
+                <div class="col-md-8">
+                    <img id="img-head" src="img/logo.png"  alt="headerimg">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="heading">
+                    <h3 class="heading-title">请选择你的模板</h3>
+                </div>
+            </div>
+
+            <!-- choose 选择模板-->
+            <div class="model">
+                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
+                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
+                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
+                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
+                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
+
+            </div>
+
+            <!-- 预览区域　-->
+            <div class="preview">
+                <div class="col-xs-5">
+                    <label class="btn btn-ruc80" for="inputImage" title="选择图片">
+                        <input type="file" id="inputImage" class="hidden" />
+                        <span>选择图片</span>
+                    </label>
+                    <br />
+                    <button type="button" id="generateImage" class="btn btn-ruc80 disabled">生成头像</button>
+                </div>
+
+                <div class="col-xs-5">
+                    <div class="imgPreview" style="width: 155px; height: 155px;">
+                        <img src="" id="">
+                    </div>
+                    <img id="" src="" alt="请选择模板">
+                </div>
+            </div>
+
+</div>
+
+
+
+
+</div class="footer-div">
+    <p class="footer">2017 © Powered by HUSTSU  All rights reserved.</p>
+</div>
+
+
+</body>
+</html>
+
