@@ -1,5 +1,18 @@
-<<<<<<< HEAD
 # hustavatar
+
+
+
+## using:
+
+
+
+bootstrap 样式框架
+
+jquery
+
+cropperjs    图像处理ｊｓ框架
+
+
 
 
 
@@ -29,24 +42,7 @@
 
   ​	->my.js
 
-- index.html	界面
-
-=======
-# HustAvatar
->>>>>>> dc618e7412bae1bbc74c544116d5ce9e66bfead1
-
-
-## using: 
-
-
-
-bootstrap 样式框架
-
-jquery
-
-cropperjs    图像处理ｊｓ框架
-
-
+  - index.html界面
 
 
 
