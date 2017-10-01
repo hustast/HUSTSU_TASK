@@ -35,8 +35,8 @@ body {
 
 .btn-model {
     margin: 10px 0%;
-    min-height: 100px;
-    min-width:  100px;
+    min-height: 120px;
+    min-width:  120px;
     background-color: #FFF;
     border: none;
     background-size: auto 80%;
