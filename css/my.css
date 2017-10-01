@@ -4,7 +4,7 @@ body {
     font-family: "Microsoft Yahei","Times New Roman",Georgia,Sans-Serif;
 }
 
-
+/*　头部　*/
 #img-head {
     margin-left: 100px;
     margin-bottom: 20px;
@@ -16,42 +16,36 @@ body {
 }
 
 .heading {
-    margin: 0 auto;
+    text-align: center;
+    margin-right:  auto;
+    margin-left: auto;
+    margin-top: 50px;
     padding-bottom: 2em;
     max-width: 85%;
+    font-weight: 900;
 }
-
-.footer{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    height:30px;
-    text-align: center;
-    font-size: 14px;
-    color: #3F3B3B;
-}
-
-.footer-div{
-    margin-bottom:  0px;
-}
-
-.model {
+/*mode 组　*/
+.model-group {
+    /*居中*/
+    margin: 0px auto;
+    /*边框*/
     border-radius: 6px;
-    margin-left: 100px;
+    /*border: solid;*/
 }
 
 .btn-model {
-    margin: 2px auto;
-    min-height: 80px;
+    margin: 10px 0%;
+    min-height: 100px;
+    min-width:  100px;
     background-color: #FFF;
     border: none;
-    background-size: auto 100%;
+    background-size: auto 80%;
     background-repeat: no-repeat;
     background-position: center center;
+    display: inline;
 }
 
-.btn-ruc80 {
+.btn-r {
     color: rgb(174, 10, 42);
     background-color: rgba(174, 10, 42,.2);
     border-color: rgba(174, 10, 42,.5);
@@ -66,10 +60,43 @@ body {
 }
 
 .preview {
-    margin-left: 200px;
-    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
 }
 
+.chooseimg {
+    margin: 0px;
+    margin-left: 30%;
+    padding-top: 4%;
+}
+
+.img-group {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#imgpreview {
+    margin-left: 20px;
+    width: 200px;
+}
+
+
+/* 尾部　*/
+.footer{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    height:30px;
+    text-align: center;
+    font-size: 14px;
+    color: #3F3B3B;
+}
+
+.footer-div{
+    margin-bottom:  0px;
+}
 
 
 
