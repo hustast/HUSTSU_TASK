@@ -1,4 +1,4 @@
-# HUSU_TASK
+# HustAvatar
 
 the logo for HUSTSU
 
