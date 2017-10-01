@@ -20,54 +20,53 @@
     <script type="text/javascript" src="cropperjs/cropper.min.js"></script>
 
     <script type="text/javascript" src="bootstrap/jquery-3.2.1.js"></script>
-    <script src="js/index.min.js"></script>
 
 </head>
 
 
 <div class="container">
-            <div class="row">
+            <div class="row header">
             <!-- the logo of hust -->
-                <div class="col-md-8">
+                <div class="col-xl-8">
                     <img id="img-head" src="img/logo.png"  alt="headerimg">
                 </div>
             </div>
 
             <div class="row">
                 <div class="heading">
-                    <h3 class="heading-title">请选择你的模板</h3>
+                    <h3>请选择你的模板</h3>
                 </div>
             </div>
 
             <!-- choose 选择模板-->
-            <div class="model">
-                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
-                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
-                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
-                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
-                <button type="button" class="col-xl-2 btn btn-model" style="background-image: url('img/model00.png');"></button>
-
+            <div class="row">
+                <div class="model-group" >
+                    <button onclick="PrintPreview(0)" id = "model00" type="button" class="btn btn-model" style="background-image: url('img/model01.png');"></button>
+                    <button onclick="PrintPreview(1)" id = "model01" type="button" class="btn btn-model" style="background-image: url('img/model01.png');"></button>
+                    <button onclick="PrintPreview(2)" id = "model02" type="button" class="btn btn-model" style="background-image: url('img/model02.png');"></button>
+                </div>
             </div>
-
+            <br><br><br>
             <!-- 预览区域　-->
-            <div class="preview">
-                <div class="col-xs-5">
-                    <label class="btn btn-ruc80" for="inputImage" title="选择图片">
+            <div class="row" style="visibility: hidden" id="preview">
+                <div class="col-xl-2 chooseimg">
+                    <label class="btn btn-r" for="inputImage" title="选择图片">
                         <input type="file" id="inputImage" class="hidden" />
                         <span>选择图片</span>
                     </label>
                     <br />
-                    <button type="button" id="generateImage" class="btn btn-ruc80 disabled">生成头像</button>
+                    <button type="button" id="generateImage" class="btn btn-r disabled">生成头像</button>
                 </div>
 
-                <div class="col-xs-5">
-                    <div class="imgPreview" style="width: 155px; height: 155px;">
-                        <img src="" id="">
+                <div class="img-group">
+                    <!--产生前-->
+                    <div class="imgPreview">
+                        <img id="imgpreview">
                     </div>
-                    <img id="" src="" alt="请选择模板">
+                    <!--产生后-->
+                    <img id="generate" src="" alt="">
                 </div>
             </div>
-
 </div>
 
 
@@ -77,6 +76,7 @@
     <p class="footer">2017 © Powered by HUSTSU  All rights reserved.</p>
 </div>
 
+<script src="js/my.js"></script>
 
 </body>
 </html>
