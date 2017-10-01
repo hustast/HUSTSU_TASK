@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # hustavatar
 
 
@@ -30,6 +31,9 @@
 
 - index.html	界面
 
+=======
+# HustAvatar
+>>>>>>> dc618e7412bae1bbc74c544116d5ce9e66bfead1
 
 
 ## using: 
