@@ -55,6 +55,3 @@ cropperjs    图像处理ｊｓ框架
 2017.10.01 整理资料，增加my.js作为js文件,整理样式，修改前端页面
 
 ​		　将图片preview 隐藏，用户点击样式后出现	
-
-![structure](/home/tigerroar/Pictures/structure.png)
-
