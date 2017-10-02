@@ -1,6 +1,9 @@
 body {
     margin-top: 0%;
-    background-image: url('../img/round.png');
+    background-image: url('../img/bd-su.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
     font-family: "Microsoft Yahei","Times New Roman",Georgia,Sans-Serif;
 }
 
@@ -79,6 +82,15 @@ body {
 #imgpreview {
     margin-left: 20px;
     width: 200px;
+}
+
+
+.img-bottom {
+    margin: 20px;
+    margin-left: 100%;
+    max-width:  300px;
+    max-height: 300px
+
 }
 
 
