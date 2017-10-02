@@ -59,7 +59,10 @@ body {
 }
 
 .imgPreview {
+    background-color: #FFF;
     overflow: hidden;
+    padding: 0px 0px;
+
 }
 
 .preview {
