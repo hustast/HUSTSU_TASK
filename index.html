@@ -50,11 +50,12 @@
                 <div class="row">
                     <div class="col-xl-2 chooseimg">
                         <label class="btn btn-r" for="inputImage" title="选择图片">
-                            <input type="file" id="inputImage" class="hidden" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff"　/>
+                            <input type="file" id="inputImage" class="hidden js-uploadfile" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff"　/>
                             <span>选择图片</span>
                         </label>
                         <br />
-                        <button type="button" id="generateImage" class="btn btn-r disabled">生成头像</button>
+                        <button type="button" id="generateImage" class="btn btn-r js-ok">
+                        生成头像</button>
                     </div>
 
                     <div class="img-group">
@@ -63,26 +64,22 @@
                             <img id="imgpreview">
                         </div>
 
-                        <!--剪裁区-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--剪裁区-->
                         <div class="container js-container">
                             <img class="js-image" src="">
                         </div>
-
-                        <!--产生后，data:image/png;base64 以base64编码，保存文件-->
-                        <img id="generate" class="js-result"  src="" alt="">
-
-
-                        <!--<div class="row">-->
-                            <!--<div class="container-test">-->
-                                <!--<div>-->
-                                    <!--<img id="image-upload" src="img/model00.png" alt="Picture">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-
-                    </div>
                 </div>
+
+                <div class="row">
+                    <h5>生成头像</h5>
+                    <!--产生后，data:image/png;base64 以base64编码，保存文件-->
+                    <div class="js-result"></div>
+                </div>
+
             </div>
 
 
@@ -92,12 +89,13 @@
 
 
 </div class="footer-div">
-    <p class="footer"><small>2017 © Powered by HUSTSU && 电信学院科协技术部  All rights reserved.</small></p>
+    <p class="footer">2017 © Powered by HUSTSU && 电信学院科协技术部  All rights reserved.</p>
 </div>
 
-<script src="js/my.js"></script>
 <script type="text/javascript" src="bootstrap/jquery-3.2.1.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
+<script src="cropperjs/cropper.min.js"></script>
+<script src="js/my.js"></script>
 
 </body>
 </html>
