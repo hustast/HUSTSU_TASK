@@ -1,6 +1,10 @@
 body {
     margin-top: 0%;
-    background-image: url('../img/BG-new.jpg');
+    background-image: url('../img/bd-su.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
     font-family: "Microsoft Yahei","Times New Roman",Georgia,Sans-Serif;
 }
 
@@ -56,7 +60,10 @@ body {
 }
 
 .imgPreview {
+    /*background-color: #FFF;*/
     overflow: hidden;
+    padding: 0px 0px;
+
 }
 
 .preview {
@@ -77,8 +84,19 @@ body {
 }
 
 #imgpreview {
-    margin-left: 20px;
+    background-color: #FFF;
+    margin-left: 0px;
     width: 200px;
+    margin-right: 0px;
+}
+
+
+.img-bottom {
+    margin: 20px;
+    margin-left: 100%;
+    max-width:  300px;
+    max-height: 300px
+
 }
 
 
@@ -98,6 +116,14 @@ body {
     margin-bottom:  0px;
 }
 
+.container-test {
+    max-width: 300px;
+    margin: 20px auto;
+    max-height: 400px;
+}
+#image-upload{
+    max-width: 100%;
+}
 
 
 
