@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<!-- bootstrap -->	
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+	<style type="text/css">
+		body{
+			
+			background-image: url(https://github.com/hustast/HustAvatar/blob/master/img/round.png?raw=true);
+			background-repeat: repeat;
+		}
+		.loading{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			background-color: #fff;
+
+		}
+		.loading .pic{
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			background-color: ;
+		}
+		.loading .pic i{
+			display: block;
+			float: left;
+			width: 16px;
+			height: 100%;
+			background-color: #395;
+			margin-left: 4px;
+			transform: scaleY(0.4);
+			animation: load 1.5s infinite;
+		}
+		.loading .pic i:nth-child(1){}
+		.loading .pic i:nth-child(2){animation-delay:0.3s;}
+		.loading .pic i:nth-child(3){animation-delay:0.5s;}
+		.loading .pic i:nth-child(4){animation-delay:0.7s;}
+		.loading .pic i:nth-child(5){animation-delay:0.9s;}
+			
+		@keyframes load{
+			0%,40%,100%{ transform: scaleY(0.4); }
+			20%{transform: scaleY(1);}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="pic">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+	<div class="container " >
+		<!-- <button type="button" class="btn btn-tpl" style="background-image: url(http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png); background-size:100%;width:200px; height:200px;background-repeat: no-repeat;"></button> -->
+	    <!-- 头部模板展示 	 -->
+		<div class="row"> 
+			<img src="https://github.com/hustast/HustAvatar/blob/master/img/logo.png?raw=true" alt="heading-image" id="heading-image" class="img-responsive center-block" style="margin-top: 5%;"> 
+			<div class="col-xs-12">
+				<!-- choose 选择模板-->
+				<div class="row">
+                <div class="heading text-center col-xs-8" style="background: #ccc;">
+                    <h3 class="heading-title h3">请选择你的模板</h3>
+                </div>
+            	</div>
+				<div class="model">
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+                <button id="Button" type="button" class="col-xs-4 btn btn-model" style="background-image: url('http://illuminatorslab.sinacloud.net/ruc80/avatarTpl/0.png');background-size:100%;background-repeat: no-repeat;"></button>
+
+            	</div>
+			</div>
+			<div class="col-xs-12"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-5"></div>	 
+		<div class="col-xs-7"></div>
+	</div>
+	<div class="row"></div>
+	<div class="row"></div>
+	<div class="footer-div text-center">
+    	<footer  class="footer">2017 © Powered by HUSTSU  All rights reserved.</footer>
+	</div>
+
+	<script  type="text/javascript" charset="utf-8" async defer>
+		var Button = new Array();
+		 Button = document.getElementById('Button');
+		var buttonWidth = document.getElementById('Button').offsetWidth;
+		for (var i = 0; i <= Button.length; i++) {
+			Button[i].style.height = '100px';
+		}
+	</script>
+	<!-- 加载页面 -->
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	<script type="text/javascript">
+
+		document.onreadystatechange = function(){
+
+			if(document.readyState == 'complete'){
+				$('.loading').fadeOut();
+			}
+		}
+	</script>
+</body>
+</html>
