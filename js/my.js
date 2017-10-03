@@ -5,51 +5,16 @@ function PrintPreview(num) {
         document.getElementById('imgpreview').src = "img/model00.png";
     } else if(num === 1){
         document.getElementById('imgpreview').src = "img/model01.png";
-    }
+    } 
 }
 
+function transclass(){
+    document.getElementById('generateImage').className='btn btn-r js-ok';
+}
 
-//cropper
-/*
-window.addEventListener('DOMContentLoaded', function () {
-    var image = document.querySelector('#image-upload');
-    var minAspectRatio = 0.5;
-    var maxAspectRatio = 1.5;
-    var cropper = new Cropper(image, {
-        ready: function () {
-            var cropper = this.cropper;
-            var containerData = cropper.getContainerData();
-            var cropBoxData = cropper.getCropBoxData();
-            var aspectRatio = cropBoxData.width / cropBoxData.height;
-            var newCropBoxWidth;
-
-            if (aspectRatio < minAspectRatio || aspectRatio > maxAspectRatio) {
-                newCropBoxWidth = cropBoxData.height * ((minAspectRatio + maxAspectRatio) / 2);
-
-                cropper.setCropBoxData({
-                    left: (containerData.width - newCropBoxWidth) / 2,
-                    width: newCropBoxWidth
-                });
-            }
-        },
-        cropmove: function () {
-            var cropper = this.cropper;
-            var cropBoxData = cropper.getCropBoxData();
-            var aspectRatio = cropBoxData.width / cropBoxData.height;
-
-            if (aspectRatio < minAspectRatio) {
-                cropper.setCropBoxData({
-                    width: cropBoxData.height * minAspectRatio
-                });
-            } else if (aspectRatio > maxAspectRatio) {
-                cropper.setCropBoxData({
-                    width: cropBoxData.height * maxAspectRatio
-                });
-            }
-        }
-    });
-});
-*/
+function transtovisible() {
+    document.getElementById('res').style.visibility='visible';
+}
 
 var cropper;
         $(".js-uploadfile").on("change", function () {
@@ -111,7 +76,7 @@ var cropper;
             rectCanvas = getRectCanvas(croppedCanvas);
             // Show
             rectImage = document.createElement('img');
-            rectImage.src = rectCanvas.toDataURL();     
+            rectImage.src = rectCanvas.toDataURL();
           
             $('.js-result').html('').append(rectImage);
             //var form=document.forms[0];
@@ -129,36 +94,6 @@ var cropper;
 
             //ajax 提交form
             return false;//不提交
-            $.ajax({
-                url: '',
-                type: "POST",
-                data: formData,
-                dataType: "text",
-                processData: false,         // 告诉jQuery不要去处理发送的数据  
-                contentType: false,        // 告诉jQuery不要去设置Content-Type请求头  
-                success: function (res) {
-                    var data = JSON.parse(res);
-                    if (data.status) {
-                        hideLoading();
-                        showTips(data.msg);
-                        setTimeout(function () {
-                            location.href = 'url?t=' + (new Date()).getTime();
-                        }, 200);
-                    } else {
-                        console.log(data);
-                    }
-                },
-                xhr: function () {            //在jquery函数中直接使用ajax的XMLHttpRequest对象  
-                    var xhr = new XMLHttpRequest();
-                    xhr.upload.addEventListener("progress", function (evt) {
-                        if (evt.lengthComputable) {
-                            var percentComplete = Math.round(evt.loaded * 100 / evt.total);
-                            console.log("正在提交..." + percentComplete.toString() + '%');        //在控制台打印上传进度  
-                        }
-                    }, false);
-                    return xhr;
-                }
-            });
         });
         //绘制矩形canvas
         function getRectCanvas(sourceCanvas) {

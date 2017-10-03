@@ -50,12 +50,11 @@
                 <div class="row">
                     <div class="col-xl-2 chooseimg">
                         <label class="btn btn-r" for="inputImage" title="选择图片">
-                            <input type="file" id="inputImage" class="hidden js-uploadfile" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff"　/>
+                            <input onclick="transclass()" type="file" id="inputImage" class="hidden js-uploadfile" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff" 　/>
                             <span>选择图片</span>
                         </label>
                         <br />
-                        <button type="button" id="generateImage" class="btn btn-r js-ok">
-                        生成头像</button>
+                        <button type="button" id="generateImage" class="btn btn-r js-ok disabled" onclick="transtovisible()">生成头像</button>
                     </div>
 
                     <div class="img-group">
@@ -74,10 +73,9 @@
                         </div>
                 </div>
 
-                <div class="row">
+                <div id="res" class="row" style="visibility: hidden">
                     <!--产生后，data:image/png;base64 以base64编码，保存文件-->
                     <div class="js-result">
-
                     </div>
                 </div>
 
