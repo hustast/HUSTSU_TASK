@@ -102,9 +102,12 @@ var cropper;
             if (!croppable) {
                 return false;
             }
+
+            var width = 300;
+            var length = 300;
             // Crop
-            croppedCanvas = cropper.getCroppedCanvas();
-            //Rect 
+            croppedCanvas = cropper.getCroppedCanvas({width: 300, height: 300,});
+            //Rect
             rectCanvas = getRectCanvas(croppedCanvas);
             // Show
             rectImage = document.createElement('img');

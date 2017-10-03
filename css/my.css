@@ -106,7 +106,7 @@ body {
 	width: 300px;
 	height: 300px; 
 	max-width: 500px;
-	max-height: 300px; 
+	max-height: 300px;
 }
 
 .img-bottom {
@@ -140,7 +140,7 @@ body {
     margin: 20px auto;
     max-height: 400px;
 }
-#image-upload{
+#inputImage{
     max-width: 100%;
 }
 
