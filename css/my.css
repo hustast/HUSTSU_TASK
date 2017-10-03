@@ -1,9 +1,9 @@
 body {
     margin-top: 0%;
-    background-image: url('../img/bd-su.jpg');
+    background-image: url('../img/BG.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center center;
+    /*background-position: center center;*/
     font-family: "Microsoft Yahei","Times New Roman",Georgia,Sans-Serif;
 }
 
@@ -124,5 +124,10 @@ body {
     max-width: 100%;
 }
 
+.foot-img {
+    margin: 10px auto;
+    width: 650px;
+    height: 300px;
+}
 
 
