@@ -15,7 +15,7 @@ body {
 
 .header{
     background-color: #600808;
-    width: 0 auto;
+    width: 0% 5%;
 }
 
 .heading {
@@ -149,5 +149,3 @@ body {
     width: 650px;
     height: 300px;
 }
-
-

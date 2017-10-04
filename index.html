@@ -14,39 +14,37 @@
 
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
-
     <link  href="cropperjs/cropper.min.css" rel="stylesheet">
     <script type="text/javascript" src="cropperjs/cropper.min.js"></script>
 
 
 </head>
 
-
+<body class="container-fluid">
 <div class="container">
             <div class="row header">
             <!-- the logo of hust -->
-                <div class="col-xl-8">
-                    <img id="img-head" src="img/header-logo.png"  alt="headerimg">
+                <div class="col-xl-12">
+                    <img class = "col-xl-4" id="img-head" src="img/header-logo.png"  alt="headerimg">
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row col-xl-12">
                 <div class="heading">
                     <h3>请选择你的模板</h3>
                 </div>
             </div>
 
             <!-- choose 选择模板-->
-            <div class="row">
+            <div class="row col-xl-12">
                 <div class="model-group" >
                     <button onclick="PrintPreview(0)" id = "model00" type="button" class="btn btn-model" style="background-image: url('img/model00.png');"></button>
                     <button onclick="PrintPreview(1)" id = "model01" type="button" class="btn btn-model" style="background-image: url('img/model01.png');"></button>
-                    
                 </div>
             </div>
             <br><br><br>
             <!-- 预览区域　-->
-            <div class="" style="visibility: hidden" id="preview">
+            <div class="col-xl-12" style="visibility: hidden" id="preview">
                 <div class="row">
                     <div class="col-xl-2 chooseimg">
                         <label class="btn btn-r" for="inputImage" title="选择图片">
@@ -57,13 +55,11 @@
                         <button type="button" id="generateImage" class="btn btn-r js-ok disabled" onclick="transtovisible()">生成头像</button>
                     </div>
 
-                    <div class="img-group">
+                    <div class="">
                         <!--产生前-->
-                        <div class="imgPreview">
-                            <img id="imgpreview">
-                        </div>
-
+                        <img id="imgpreview">
                     </div>
+
                 </div>
 
                 <div class="row">
