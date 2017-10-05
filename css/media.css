@@ -52,11 +52,11 @@
 			20%{transform: scaleY(1);}
 		}
 		.header-box img{
-			
 			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
-			padding-top: 20%;
+			padding-top: 0%;
+			background-color: #600808;
 			
 		}
 		.bottom-image{
@@ -75,31 +75,31 @@
 			    max-width: 85%;
 			    font-weight: 900;
 			}
-		.footer{
-			    margin-top: 100px;
-			    margin-left: auto;
-			    margin-right: auto;
-			    margin-bottom: 0px;
-			    height:30px;
-			    text-align: center;
-			    font-size: 8px;
-		}
 		/* 预览盒子 */
 		.prev-div{
 			width:320px;
 			margin-right: auto;
 			margin-left: auto;
 		}
-		.footer-div{
-		    margin-bottom:  0px;
-		    color: #fff;
-		    background-color: #600808;
-		    width: 0 auto;
+		.footer{
+		    margin-top: 100px;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-bottom: 0px;
+		    height: 5%;
+		    text-align: center;
+		    font-size: 14px;
+		    color: #3F3B3B;
 		}
 
+		.footer-div{
+		    margin-bottom:  0px;
+		    margin-bottom: 1%;
+		}
 		.heading-title{
+			margin-top: 60px;
 			color: #fff;
-			 height: 50px;
+			height: 50px;
 		}
 		.model{
 			width: 240px;
@@ -163,6 +163,7 @@
         	height: 200px;
         	width: 200px;
         	margin-top: 20px;
+        	margin-bottom: 20px;
         }
 		/* 大屏显示器 */
 		@media screen and (min-width:415px ) and (max-width: 1023px){
@@ -172,7 +173,6 @@
 				background-repeat: no-repeat;
 				background-size: 755px 100%;
 				background-position: center top;
-				
 				scroll-behavior: no;
 				overflow-x:hidden;
 			}
@@ -246,6 +246,7 @@
 			    color: #fff;
 			    background-color: #600808;
 			    max-width: 755px;
+
 			}
 		}
 		
