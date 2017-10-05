@@ -69,7 +69,10 @@ var cropper;
                 return false;
             }
             // Crop
-            croppedCanvas = cropper.getCroppedCanvas();
+            croppedCanvas = cropper.getCroppedCanvas({
+            	width: 300,
+            	height: 300,
+            });
             //Rect 
             rectCanvas = getRectCanvas(croppedCanvas);
             // Show
