@@ -1,3 +1,6 @@
+<?php
+require_once "judge.php";
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,7 +10,7 @@
 	<meta name="Keywords" content="华中科技大学校徽头像、华中科技校徽头像、华科校徽头像、华中大校徽头像、华科大校徽头像">
 	<meta name="Description" content="华中科技大学校徽头像">
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-	<!-- bootstrap -->	
+	<!-- bootstrap -->
 	<link rel="shortcut icon" href="https://raw.githubusercontent.com/hustast/HustAvatar/master/img/hustico.ico" type="image/x-icon">
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -40,12 +43,12 @@
 	                    <h3 class="heading-title" >请选择你的模板</h3>
 	                </div>
             	</div>
-	            
+
 					<div class="model" id="model">
 	                <button id="Button" onclick="PrintPreview(0)" type="button" class="col-xs-6 btn btn-model" style="background-image: url('img/model00.png');"></button>
 	                <button id="Button" onclick="PrintPreview(1)" type="button" class="col-xs-6 btn btn-model" style="background-image: url('img/model01.png');"></button>
 	            	</div>
-	           
+
             	<!-- 预览区域　-->
  <div class="row prev-div" style="visibility: hidden;" id="preview">
                     <div class="col-xs-5 chooseimg">
@@ -56,7 +59,7 @@
                         <br />
                         <button type="button" id="generateImage" class="btn btn-r js-ok">生成头像</button>
                     </div>
-        
+
                     <div class="img-group col-xs-7" >
                         <!-- 产生前 -->
                         <div class="imgPreview" >
@@ -79,14 +82,14 @@
 	<div class="bottom-image">
 		<img src="img/foot.png" alt="" >
 	</div>
-	
+
 	<div class="footer-div">
 	    <p class="footer">2017 © Powered by HUSTSU && 电信学院科协技术部</p>
 	</div>
 
 
 	<!-- js -->
-	
+
 	<script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/cropper.min.js"></script>
     <script src="js/cropper.smallScreen.js"></script>
