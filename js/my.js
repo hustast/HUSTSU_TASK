@@ -80,22 +80,28 @@ var cropper;
             rectImage.src = rectCanvas.toDataURL();     
           
             $('.js-result').html('').append(rectImage);
+            alert("rectImage.src");
 
             //var form=document.forms[0];
             var formData = new FormData();   //这里连带form里的其他参数也一起提交了,如果不需要提交其他参数可以直接FormData无参数的构造函数  
 
             //convertBase64UrlToBlob函数是将base64编码转换为Blob  
             formData.append("filename", convertBase64UrlToBlob(rectCanvas.toDataURL()));  //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
-            //ajax 提交form 
 
-            return true;//不提交 
+            //ajax 提交form
+            return true;//不提交
             $.ajax({
                 url: 'http://localhost/HustAvatar/upload',
                 type: "POST",
                 data: formData,
                 dataType: "text",
+
+                processData: true,         // 告诉jQuery不要去处理发送的数据
+                contentType: true,        // 告诉jQuery不要去设置Content-Type请求头
+
                 processData: true,         // 告诉jQuery不要去处理发送的数据  
                 contentType: true,        // 告诉jQuery不要去设置Content-Type请求头  
+
 
                 success: function (res) {
                     var data = JSON.parse(res);
