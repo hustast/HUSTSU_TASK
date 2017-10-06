@@ -14,7 +14,6 @@ var cropper;
             fr.readAsDataURL(file);
             fr.onload = function () {
                 //这里初始化cropper
-                console.log(fr);
                 $('.js-image').attr('src',fr.result);
                 iniCropper()
             };
@@ -52,10 +51,10 @@ var cropper;
                 return false;
             }
 
-            var width = 200;
-            var length = 200;
+            var width = 300;
+            var length = 300;
             // Crop
-            croppedCanvas = cropper.getCroppedCanvas({width: 200, height: 200,});
+            croppedCanvas = cropper.getCroppedCanvas({width: 300, height: 300,});
             //Rect
             rectCanvas = getRectCanvas(croppedCanvas);
             // Show
@@ -68,34 +67,33 @@ var cropper;
             //这里连带form里的其他参数也一起提交了,如果不需要提交其他参数可以直接FormData无参数的构造函数
             var formData = new FormData();
 
+
             //convertBase64UrlToBlob函数是将base64编码转换为Blob
 
             //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
             formData.append("filename", convertBase64UrlToBlob(rectCanvas.toDataURL()));
+            formData.append('type', 1);
+            
             //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
 
 
 
             //ajax 提交form
-            return false;//不提交
+            //return false;//不提交
             $.ajax({
-                url: '',
+                url: 'upload.php',
                 type: "POST",
                 data: formData,
-                dataType: "text",
                 processData: false,         // 告诉jQuery不要去处理发送的数据  
                 contentType: false,        // 告诉jQuery不要去设置Content-Type请求头  
                 success: function (res) {
+                    console.log(res);
                     var data = JSON.parse(res);
-                    if (data.status) {
-                        hideLoading();
-                        showTips(data.msg);
-                        setTimeout(function () {
-                            location.href = 'url?t=' + (new Date()).getTime();
-                        }, 200);
-                    } else {
-                        console.log(data);
-                    }
+                    var path = data.gen_image;
+                    
+                    console.log(document.getElementsByClassName('imgPreview')[0].children[0].src);
+                    document.getElementsByClassName('imgPreview')[0].children[0].src=path;
+
                 },
                 xhr: function () {            //在jquery函数中直接使用ajax的XMLHttpRequest对象  
                     var xhr = new XMLHttpRequest();

@@ -1,25 +1,15 @@
 # -*- coding: utf-8 -*-
 
 import cv2 as cv
-import matplotlib.pyplot as plt
 import numpy as np
 import sys
-
-
-def show_image(image):
-    (r,g,b) = cv.split(image)
-    new_image = cv.merge([b,g,r])
-    plt.imshow(new_image)
-    plt.axis('off')
-    plt.show()
-
 
 def process_image(input_image_path, model_type, generate_path):
     image = cv.imread(input_image_path)
     if model_type == 0:
-        model_image_path = 'models/model0.png'
+        model_image_path = '/var/www/html/HustAvatar/image_process/models/model0.png'
     else:
-        model_image_path = 'models/model1.png'
+        model_image_path = '/var/www/html/HustAvatar/image_process/models/model1.png'
 
     model_image = cv.imread(model_image_path)
 
