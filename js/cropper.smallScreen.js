@@ -1,5 +1,6 @@
 
 /*裁剪cropper.js*/
+var type__ = 0;
 var cropper;
         $(".js-uploadfile").on("change", function () {
             var fr = new FileReader();
@@ -72,7 +73,7 @@ var cropper;
 
             //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
             formData.append("filename", convertBase64UrlToBlob(rectCanvas.toDataURL()));
-            formData.append('type', 1);
+            formData.append('type', type__);
             
             //append函数的第一个参数是后台获取数据的参数名,和html标签的input的name属性功能相同
 
@@ -87,12 +88,12 @@ var cropper;
                 processData: false,         // 告诉jQuery不要去处理发送的数据  
                 contentType: false,        // 告诉jQuery不要去设置Content-Type请求头  
                 success: function (res) {
-                    console.log(res);
                     var data = JSON.parse(res);
                     var path = data.gen_image;
                     
-                    console.log(document.getElementsByClassName('imgPreview')[0].children[0].src);
                     document.getElementsByClassName('imgPreview')[0].children[0].src=path;
+                    document.getElementById('cutter').style.visibility='invisible';
+                    
 
                 },
                 xhr: function () {            //在jquery函数中直接使用ajax的XMLHttpRequest对象  
@@ -149,7 +150,9 @@ var cropper;
             document.getElementById('preview').style.visibility='visible';
             if(num === 0) {
                 document.getElementById('imgpreview').src = "img/model00.png";
+                type__ = 0;
             } else if(num === 1){
                 document.getElementById('imgpreview').src = "img/model01.png";
+                type__ = 1;
             }
          }
