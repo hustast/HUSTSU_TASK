@@ -28,6 +28,6 @@ move_uploaded_file($filename['tmp_name'],'./images/'.$image_path);
 
 generate_image($image_path, $type, $gen_image_path);
 
-exit(json_encode(['status'=>1,'msg'=>'头像上传成功','gen_image'=>'http://118.89.216.47/HustAvatar/images/'.$gen_image_path]));
+exit(json_encode(['status'=>1,'msg'=>'头像上传成功','gen_image'=>'http://localhost/HustAvatar/images/'.$gen_image_path]));
 
 ?>

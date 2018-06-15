@@ -1,6 +1,4 @@
-<?php
-require_once "judge.php";
-?>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -40,12 +38,13 @@ require_once "judge.php";
 				<!-- choose 选择模板-->
 				<div class="row" >
 	                <div class="heading text-center ">
-	                    <h3 class="heading-title" >请选择你的模板</h3>
+	                    <h4 class="heading-title" style="">请选择你的模板</h3>
 	                </div>
             	</div>
 
 					<div class="model" id="model">
-	                <button id="Button" onclick="PrintPreview(0)" type="button" class="col-xs-6 btn btn-model" style="background-image: url('img/model00.png');"></button>
+                        <button id="Button" onclick="PrintPreview(0)" type="button" class="col-xs-6 btn btn-model" style="background-image: url('img/model00.png');"></button>
+
 	                <button id="Button" onclick="PrintPreview(1)" type="button" class="col-xs-6 btn btn-model" style="background-image: url('img/model01.png');"></button>
 	            	</div>
 
@@ -81,12 +80,12 @@ require_once "judge.php";
 
 			</div> -->
 
-	<div class="bottom-image">
-		<img src="img/foot.png" alt="" >
-	</div>
+<!--	<div class="bottom-image">-->
+<!--		<img src="img/foot.png" alt="" >-->
+<!--	</div>-->
 
 	<div class="footer-div">
-	    <p class="footer">2017 © Powered by HUSTSU && 电信学院科协技术部</p>
+	    <p class="footer">2018 © Powered by HUSTSU && 电信学院科协技术部</p>
 	</div>
 
 
